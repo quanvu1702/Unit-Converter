@@ -1,0 +1,144 @@
+/* Reset căn bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%; /* Đảm bảo chiều cao bao phủ toàn màn hình */
+}
+
+body {
+    background-color: #f9f9f9;
+    padding: 40px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Thanh Menu chọn loại hình (Tab) */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+}
+
+nav ul li a.active-tab {
+    color: #3b82f6;
+    border-bottom: 3px solid #3b82f6;
+}
+
+/* Bố cục chính chia làm 2 cột */
+main {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    flex: 1; /* Thêm dòng này để đẩy footer xuống đáy */
+}
+
+/* CSS chung cho cả 2 hộp Trái & Phải */
+.converter-box, .result-box {
+    flex: 1;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 5px 5px 0px #000; /* Đổ bóng vuông góc đặc trưng */
+    min-height: 400px;
+}
+
+/* Ẩn các tab không hoạt động */
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+h2, h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Định dạng Input và Dropdown Select */
+input[type="number"], select {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+/* Định dạng nút bấm */
+button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    box-shadow: 3px 3px 0px #000;
+    transition: all 0.1s ease;
+}
+
+button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #000;
+}
+
+.btn-convert {
+    background-color: #fff;
+}
+
+/* Khối hiển thị kết quả bên phải */
+.result-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.display-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.result-placeholder {
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}

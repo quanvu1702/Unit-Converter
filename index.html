@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Unit Converter</h1>
+        <nav>
+            <ul>
+                <li><a href="#Length">Length</a></li>
+                <li><a href="#Weight">Weight</a></li>
+                <li><a href="#Temperature">Temperature</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="converter-box">
+        <div id="Length" class="tab-content active">
+            <h2>Enter the length to convert</h2>
+            <form id="lengthForm">
+                <div class="input-group">
+                    <input type="number" id="lengthInput" placeholder="Enter value" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Unit to Convert from</label>
+                    <select id="lengthFrom">
+                        <option value="mm">Millimeter</option>
+                        <option value="cm">Centimeter</option>
+                        <option value="m" selected>Meter</option>
+                        <option value="km">Kilometer</option>
+                        <option value="inch">Inch</option>
+                        <option value="ft">Feet</option>
+                        <option value="yd">Yard</option>
+                        <option value="mile">Mile</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Unit to Convert to</label>
+                    <select id="lengthTo">
+                        <option value="mm">Millimeter</option>
+                        <option value="cm" selected>Centimeter</option>
+                        <option value="m">Meter</option>
+                        <option value="km">Kilometer</option>
+                        <option value="inch">Inch</option>
+                        <option value="ft">Feet</option>
+                        <option value="yd">Yard</option>
+                        <option value="mile">Mile</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-convert">Convert</button>
+            </form>
+        </div>
+
+        <div id="Weight" class="tab-content">
+            <h2>Enter the weight to convert</h2>
+            <form id="weightForm">
+                <div class="input-group">
+                    <input type="number" id="weightInput" placeholder="Enter value" required>
+                </div>
+                <div class="input-group">
+                    <label>Unit to Convert from</label>
+                    <select id="weightFrom">
+                        <option value="mg">Milligram</option>
+                        <option value="g">Gram</option>
+                        <option value="kg" selected>Kilogram</option>
+                        <option value="oz">Ounce</option>
+                        <option value="lb">Pound</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Unit to Convert to</label>
+                    <select id="weightTo">
+                        <option value="mg">Milligram</option>
+                        <option value="g" selected>Gram</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="oz">Ounce</option>
+                        <option value="lb">Pound</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-convert">Convert</button>
+            </form>
+        </div>
+
+        <div id="Temperature" class="tab-content">
+            <h2>Enter the temperature to convert</h2>
+            <form id="temperatureForm">
+                <div class="input-group">
+                    <input type="number" id="temperatureInput" placeholder="Enter value" required>
+                </div>
+                <div class="input-group">
+                    <label>Unit to Convert from</label>
+                    <select id="temperatureFrom">
+                        <option value="C" selected>Celsius (°C)</option>
+                        <option value="F">Fahrenheit (°F)</option>
+                        <option value="K">Kelvin (K)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Unit to Convert to</label>
+                    <select id="temperatureTo">
+                        <option value="C">Celsius (°C)</option>
+                        <option value="F" selected>Fahrenheit (°F)</option>
+                        <option value="K">Kelvin (K)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-convert">Convert</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="result-box">
+        <div id="resultContainer" class="result-content" style="display: none;">
+            <h3>Result of your calculation</h3>
+            <div id="resultText" class="display-value">0 ft = 0 cm</div>
+            <button id="btnReset" class="btn-reset">Reset</button>
+        </div>
+        <div id="emptyResultText" class="result-placeholder">
+            <p>Fill out the form and click Convert to see the result.</p>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
